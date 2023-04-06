@@ -3,7 +3,7 @@ Install-Module MSOnline
 
 $Credential = Get-Credential
 Connect-MsolService -Credential $Credential
-Connect-SPOService -Credential $Credential -Url https://vambrace-admin.sharepoint.com
+Connect-SPOService -Credential $Credential -Url https://domain-admin.sharepoint.com
 
 $list = @()
 #Counters
