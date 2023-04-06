@@ -1,0 +1,9 @@
+Install-Module -Name Microsoft.Online.SharePoint.PowerShell
+Install-Module MSOnline
+
+$Credential = Get-Credential
+Connect-MsolService -Credential $Credential
+Connect-SPOService -Credential $Credential -Url https://domain-admin.sharepoint.com
+
+$users = Get-Content -path "C:\Users.txt"
+Request-SPOPersonalSite -UserEmails $users
